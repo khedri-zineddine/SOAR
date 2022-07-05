@@ -1,0 +1,5 @@
+*
+soar-pfe
+SOAR_API
+!.gitignore
+!docker-compose.yml
