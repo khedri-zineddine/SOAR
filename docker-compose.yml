@@ -9,9 +9,9 @@ services:
     volumes: 
       - cache:/data
   fronend:
-    build: ./soar-pfe
+    build: ./soar-frontend
     volumes:
-      - ./soar-pfe:/src
+      - ./soar-frontend:/src
       - /src/node_modules
     ports:
       - '8001:8001'
@@ -20,9 +20,9 @@ services:
       NODE_ENV: production
       APP_PORT: 8001
   backend:
-    build: ./SOAR_API
+    build: ./soar-backend
     volumes:
-      - ./SOAR_API:/src
+      - ./soar-backend:/src
       - /src/node_modules
     ports:
       - '8002:8002'
