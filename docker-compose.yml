@@ -1,5 +1,11 @@
 version: '3.3'
 services:
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: soar
+      MONGO_INITDB_ROOT_PASSWORD: soar-password
   redis_service:
     image: redis:6.2-alpine
     restart: always
@@ -31,6 +37,7 @@ services:
       NODE_ENV: production
     depends_on:
       - redis_service
+      - mongo
 volumes:
   cache:
     driver: local
