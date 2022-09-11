@@ -21,7 +21,7 @@ services:
       - /src/node_modules
     ports:
       - '8001:8001'
-    command: npm run heroku:serve
+    command: npm run dev
     environment:
       NODE_ENV: production
       APP_PORT: 8001
